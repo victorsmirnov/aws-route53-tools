@@ -1,0 +1,52 @@
+{
+  "author": "Victor Smirnov <admin@victorsmirnov.blog> (victorsmirnov.blog)",
+  "bin": {
+    "a53": "./dist/aws-route53-tools.js",
+    "aws-route53-tools": "./dist/aws-route53-tools.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-route-53": "^3.454.0",
+    "@aws-sdk/client-route-53-domains": "^3.454.0",
+    "chalk": "^5.3.0",
+    "inquirer": "^9.2.12",
+    "update-notifier": "^7.0.0"
+  },
+  "description": "An opinionated set of tools to help administer AWS Route53.",
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^20.9.4",
+    "@types/update-notifier": "^6.0.8",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
+    "rimraf": "^5.0.5",
+    "snazzy": "^9.0.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "/dist"
+  ],
+  "homepage": "https://github.com/victorsmirnov/aws-route53-tools",
+  "keywords": [
+    "aws",
+    "route53",
+    "dns",
+    "cli",
+    "tools"
+  ],
+  "license": "ISC",
+  "name": "aws-route53-tools",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "format": "ts-standard --fix --verbose | snazzy",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "ts-standard --verbose | snazzy"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
