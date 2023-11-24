@@ -1,8 +1,8 @@
 {
   "author": "Victor Smirnov <admin@victorsmirnov.blog> (victorsmirnov.blog)",
   "bin": {
-    "a53": "./dist/aws-route53-tools.js",
-    "aws-route53-tools": "./dist/aws-route53-tools.js"
+    "a53": "./dist/src/aws-route53-tools.js",
+    "aws-route53-tools": "./dist/src/aws-route53-tools.js"
   },
   "dependencies": {
     "@aws-sdk/client-route-53": "^3.454.0",
