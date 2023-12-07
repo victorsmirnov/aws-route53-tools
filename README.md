@@ -2,11 +2,13 @@
 
 # aws-route53-tools
 
-Collection of one script to check AWS Route53 resources.
+Collection of now two scripts to check AWS Route53 resources.
 
 * Check hosted zones script fetches all public zones hosted in AWS Route53 default profile and compares
   NS servers returned by NS resolver with NS servers configured in AWS Route53. If there is a mismatch
   it will print an error message.
+* Compare CloudFront distributions with alias records in the hosted zones. Show distributions without any aliases
+  and aliases not listed under related distribution's aliases.
 
 ## Installation
 

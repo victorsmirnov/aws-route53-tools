@@ -8,3 +8,9 @@ export function difference<T> (setA: Set<T>, setB: Set<T>): Set<T> {
 export function symmetricDifference<T> (setA: Set<T>, setB: Set<T>): Set<T> {
   return new Set<T>([...difference(setA, setB), ...difference(setB, setA)])
 }
+
+export function printSet<T> (set: Set<T>): string {
+  return set.size === 0
+    ? '[empty]'
+    : [...set].sort((a, b) => String(a).localeCompare(String(b))).join(', ')
+}
